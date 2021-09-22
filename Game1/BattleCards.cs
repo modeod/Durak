@@ -9,9 +9,9 @@ namespace Game1
     {
         private int maxCardsNum;
         private Dictionary<Card, Card> battleYard;
+        public Dictionary<Card, Card> BattleYard { get { return battleYard; } }
         private Card_Suits trump;
         public int MaxCardsNum { get { return maxCardsNum; } }
-        public Dictionary<Card, Card> BattleYard { get { return battleYard; } }
 
         public BattleCards(int maxCardsNum, Card_Suits trump)
         {
