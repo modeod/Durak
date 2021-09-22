@@ -27,19 +27,25 @@ namespace Game1
             cards.Shuffle();
         }
 
+        public void AddCardToDeck(Card card)
+        {
+            cards.Add(card);
+        }
+
         public void GiveCardFromDeck(Player player, int num)
         {
             if(num <= 0) { Console.WriteLine("Error GiveCardFromDeck: Negative number"); return; }
-            if(cards.Count == 0) { return; }
+            if(cards.Count <= 0) { Console.WriteLine("Error GiveCardFromDeck: Negative number"); return; }
             for(int i = 1; i <= num; i++)
             {
                 player.Cards.Add(cards.First());
                 cards.Remove(cards.First());
             }
         }
+
         public void GiveCardFromDeck(Player player)
         {
-            if (cards.Count == 0) { return; }
+            if (cards.Count <= 0) { Console.WriteLine("Error GiveCardFromDeck: Negative number"); return; }
             player.Cards.Add(cards.First());
             cards.Remove(cards.First());
         }
