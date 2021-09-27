@@ -38,7 +38,6 @@ namespace Game1
             }
             else return false;
 
-
         }
         public bool BeatCard(int number, Card beating) //returns true if can beat card
         {
@@ -58,7 +57,7 @@ namespace Game1
             battleYard = new Dictionary<Card, Card>();
         }
 
-        public void GiveUp(Player player)
+        public void TakeBattleCardsAndClearBattle(Player player)
         {
             foreach(Card card in battleYard.Keys.ToArray())
             {
