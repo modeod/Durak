@@ -4,6 +4,7 @@ using System.Text;
 
 namespace Game1
 {
+
     enum Card_Type { Six = 6, Seven, Eight, Nine, Ten, Jack, Queen, King, Ace };
 
     enum Card_Suits
